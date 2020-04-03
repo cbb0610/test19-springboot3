@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+index
+<!--/*@thymesVar id="username" type=""*/-->
+<h1 th:text='${username}' th:id="${username}"></h1>
+<!--/*@thymesVar id="h2" type=""*/-->
+<div th:utext="${h2}"></div>
+
+<h3 th:text="${user}" th:each="user:${users}"></h3>
+--------------------------------------------------------
+<h3>
+    <span th:each="user:${users}">[[${user}]]</span>
+</h3>
+
+<h3 th:if="${int=='1'}"></h3>1值显示</h3>
+<h3 th:if="${ast == null}"></h3>null值显示</h3>
+<h3 th:if="${dy != '1'}"></h3>大于1值显示</h3>
+<h3 th:if="${xy < 1}"></h3>小于1值显示</h3>
+</body>
+</html>
